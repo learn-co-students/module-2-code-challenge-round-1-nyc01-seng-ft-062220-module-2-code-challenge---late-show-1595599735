@@ -13,6 +13,6 @@
     <%= f.label :guest_id, "Episode #" %>
     <%= f.collection_select :episode_id, @episodes, :id, :number %><br>
     <%= f.label :ratings, "Rating #" %>
-    <%= f.select :ratings, options_for_select(1..56) %><br>
+    <%= f.select :ratings, options_for_select(1..5) %><br>
     <%= f.submit %>
     <% end %>
