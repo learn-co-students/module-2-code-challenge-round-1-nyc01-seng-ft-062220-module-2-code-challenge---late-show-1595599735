@@ -2,6 +2,7 @@
 
 
 
+<% sorted_episodes = @guest.episode.sort_by{|episode| episode %>
 <ul>
     <% @guest.episodes.each do |episode| %>
         <li>Appeared on: <%= link_to episode.date.strftime("%B %d, %Y"), episode_path(episode) %></li> 
