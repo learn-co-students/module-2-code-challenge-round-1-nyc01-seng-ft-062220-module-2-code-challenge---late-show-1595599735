@@ -4,8 +4,8 @@
 <%= f.collection_select :guest_id, @guests, :id, :name %><br><br>
 <b><%= f.label :episode_date %></b><br>
 <%= f.collection_select :episode_id, @episodes, :id, :date %><br><br>
-<%= f.label :rating %><br>
-<%= f.number_field :rating %><br><br>
+<b><%= f.label :rating %><b><br>
+<%= f.number_field :rating, in: 1..5 %><br><br> <!--added validation on the FE technically you can enter, but this will also do FE validation -->
 <%= f.submit %>
 <% end %>
 

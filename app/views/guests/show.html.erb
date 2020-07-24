@@ -2,7 +2,12 @@
 
 <h2>List of episodes and ratings:</h2>
 <% @guest.episodes.each do |episode| %>
-<% @guest.appearances.each do |appearance| %>
-<li><%="Episode ##{episode.number} Rating #{appearance.rating} Date: #{episode.date}" %></li>
-<% end %>
+<li><%= link_to "Episode ##{episode.number} || Date: #{episode.date}", episode_path(episode) %></li>
 <% end %> 
+<% rating_count=0  %>
+<% ave_rating =0 %>
+<% @guest.appearances.each_with_index do |appearance, i| %>
+<% rating_count += appearance.rating %>
+<% ave_rating = rating_count/i %>
+<% end %>
+Average Rating:<%= ave_rating %>
