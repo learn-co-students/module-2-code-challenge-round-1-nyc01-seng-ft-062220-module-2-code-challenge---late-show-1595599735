@@ -1,0 +1,25 @@
+  <% if flash[:user_error] %>
+    <div id="error_explanation">
+      <h2><%= pluralize(flash[:user_error].count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% flash[:user_error].each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= form_for @appearance do |a| %>
+
+<label>Guest Name: </label>
+<%= a.collection_select :guest_id, @guests, :id, :name %><br><br>
+
+<label>Episode Number: </label>
+<%= a.collection_select :episode_id, @episodes, :id, :number %><br><br>
+
+<label>Rating: </label>
+<%= a.number_field :rating %><br><br>
+
+<%= a.submit "Save Appearance" %>
+<% end %>
