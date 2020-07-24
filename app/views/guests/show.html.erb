@@ -1,0 +1,8 @@
+<h1> Learn more about <%= @guest.name %></h1>
+
+<h2>List of episodes and ratings:</h2>
+<% @guest.episodes.each do |episode| %>
+<% @guest.appearances.each do |appearance| %>
+<li><%="Episode ##{episode.number} Rating #{appearance.rating} Date: #{episode.date}" %></li>
+<% end %>
+<% end %> 
