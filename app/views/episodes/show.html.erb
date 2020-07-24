@@ -1,0 +1,8 @@
+<h1>Episode Show Page with Ratings for each Appearance</h1>
+
+<h3>Episode Date: <%= @episode.date %></h3>
+<% @episode.appearances.each do |a| %>
+
+<p>Rating : <%= a.rating %></p>
+
+<% end %>
