@@ -68,7 +68,7 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 
 
-### 1. Appearance Model
+done - ### 1. Appearance Model
 
 To log that a specific Guest appeared on a certain Episode, we need to create the Appearance model. **Make the necessary updates to the schema and models** so that:
 
@@ -76,7 +76,7 @@ To log that a specific Guest appeared on a certain Episode, we need to create th
 - Episode can have multiple guests
 - Appearance stores a numeric rating
 
-### 2. New Appearance Form
+done - ### 2. New Appearance Form
 
 A user can fill out a form to create a new Appearance. They can:
 
@@ -87,7 +87,7 @@ A user can fill out a form to create a new Appearance. They can:
 
 After submitting the form, the user should be redirected to the selected episode's show page.
 
-### 3. Episode Show Page
+done - ### 3. Episode Show Page
 
 On the episode show page, a user should see:
 
@@ -95,7 +95,7 @@ On the episode show page, a user should see:
 - A list of the guests who were on that episode
 - Each guest's name should link to the Guest Show page
 
-### 4. Guest Show Page Episode links
+done - ### 4. Guest Show Page Episode links
 
 On the Guest show page, add a list of the Episodes the Guest has appeared on.
 
@@ -106,7 +106,7 @@ For each Episode, show the:
 
 Each Episode date should link to the show page for that Episode.
 
-### 5. Appearance Rating Validation
+done - ### 5. Appearance Rating Validation
 
 The rating on an Appearance should be between 1 and 5 (inclusive - `1` and `5` are okay).
 
@@ -114,7 +114,7 @@ The rating on an Appearance should be between 1 and 5 (inclusive - `1` and `5` a
 - Add handling for this error to the Appearance create action.
 - The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating.
 
-### 6. Advanced: Additional Appearance Validation
+done - ### 6. Advanced: Additional Appearance Validation
 
 A Guest should only appear on a given Episode once.
 
