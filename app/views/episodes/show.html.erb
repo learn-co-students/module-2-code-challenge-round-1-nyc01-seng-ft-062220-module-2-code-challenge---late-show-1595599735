@@ -1,0 +1,7 @@
+<h1>Episode: <%= @episode.date %></h1>
+
+<p><% @episode.guests.each do |guest| %></p>
+
+    <%= link_to guest.name, guest_path(guest) %>
+
+<%end %>
