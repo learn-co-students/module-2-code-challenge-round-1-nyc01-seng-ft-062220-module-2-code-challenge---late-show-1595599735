@@ -1,0 +1,5 @@
+<h1> List of Appearnaces </h1>
+
+<ul><% @appearances.each do |appearance| %>
+    <li><%= link_to "#{appearance.guest.name} | #{appearance.episode.date} | #{appearance.ratings} ", appearance_path(appearance) %>
+    <% end %>

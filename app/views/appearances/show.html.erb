@@ -1,0 +1,8 @@
+<h1> Appearance Information </h1>
+
+<p>Guest Name : <%=@appearance.guest.name %></p>
+<p>Episode # : <%=@appearance.episode.number %></p>
+<p>Episode Date : <%=@appearance.episode.date %></p>
+<p>Ratings # <%=@appearance.ratings %></p>
+
+<%= button_to "Edit Appearance", edit_appearance_path, method: 'get' %>
