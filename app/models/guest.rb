@@ -6,6 +6,4 @@ class Guest < ApplicationRecord
         self.appearances.find_by(episode: episode).ratings
     end
 
-
-
-end
+   

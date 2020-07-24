@@ -2,6 +2,7 @@
 
 <p><strong>Episode Date: <%= @episode.date.strftime("%B %d, %Y") %> </strong></p>
 <p><strong> List of Guests : </strong></p>
+<%= button_to "Edit Guest", edit_guest_path, method: 'get' %>
 <ul>
     <% @episode.guests.each do |guest| %>
         <li><%= link_to guest.name, guest_path(guest) %></li>

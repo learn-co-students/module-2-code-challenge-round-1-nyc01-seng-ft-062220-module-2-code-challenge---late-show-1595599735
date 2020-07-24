@@ -3,9 +3,11 @@
 <p><strong>Guest Name: <%= @guest.name %> </strong></p>
 <p><strong>Guest Occupation: <%= @guest.occupation %> </strong></p>
 <p><strong> List of Episodes : </strong></p>
+<%= button_to "Edit Guest", edit_guest_path, method: 'get' %>
 <ul>
     <% @guest.episodes.each do |episode| %>
         <li><%= link_to "#{episode.date} | ratings# #{@guest.appearance_ratings(episode)}", episode_path(episode) %></li>
     <% end %>
         </ul>
+
 
