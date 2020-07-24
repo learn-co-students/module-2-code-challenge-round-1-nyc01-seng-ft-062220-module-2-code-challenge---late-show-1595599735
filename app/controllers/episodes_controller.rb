@@ -18,4 +18,5 @@ class EpisodesController < ApplicationController
   def set_episode
     @episode = Episode.find(params[:id])
   end 
+  
 end

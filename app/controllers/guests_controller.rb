@@ -9,12 +9,9 @@ class GuestsController < ApplicationController
   end 
   
   private 
-  def episode_params 
-    params.require(:episode).permit(:date, :number)
-  end 
   
   def set_episode
-    @episode = Episode.find(params[:id])
+    @guest = Guest.find(params[:id])
   end 
 
 end
