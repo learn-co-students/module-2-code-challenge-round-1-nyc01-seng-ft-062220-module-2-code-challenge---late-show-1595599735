@@ -6,3 +6,5 @@
 <% @episode.guests.each do |guest|%>
 <li> Guest Name: <%= link_to guest.name, guest_path(guest) %> </li>
 <%end%>
+
+<p>Average rating: <%= @episode.average_rating%> </p>
