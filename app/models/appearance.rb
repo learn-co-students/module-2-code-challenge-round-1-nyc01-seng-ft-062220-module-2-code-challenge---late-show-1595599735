@@ -4,4 +4,7 @@ class Appearance < ApplicationRecord
 
   validates :rating, numericality: {greater_than_or_equal_to: 1}
   validates :rating, numericality: {less_than_or_equal_to: 5}
+
+  validates :guest_id, uniqueness: {scope: :episode_id,
+  message: "rating should only appear on a given Episode once."}
 end
