@@ -22,6 +22,15 @@ class EpisodesController < ApplicationController
 
   def show 
     @guests = @episode.guests
+
+    if @episode.appearances.count > 0
+      numerator = 0
+      @episode.appearances.each do |appearance|
+        numerator += appearance.rating
+      end
+
+      @average_rating = numerator / @episode.appearances.count
+    end
   end
 
   def update 

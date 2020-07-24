@@ -21,7 +21,7 @@ class GuestsController < ApplicationController
   end
 
   def show 
-    @appearances = @guest.appearances
+    @appearances = @guest.appearances.sort_by(&:rating).reverse
   end
 
   def update 

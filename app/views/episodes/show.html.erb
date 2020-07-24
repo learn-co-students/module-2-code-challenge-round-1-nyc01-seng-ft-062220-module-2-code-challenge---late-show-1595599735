@@ -2,9 +2,20 @@
 
 Date: <%= @episode.date %><br>
 
-Guests: 
-<ul>
-<% @guests.each do |guest| %>
-    <li><%= link_to guest.name, guest_path(guest) %></li>
+<% if @episode.appearances.count > 0 %>
+<br>
+    Guests: 
+    <ul>
+    <% @guests.each do |guest| %>
+        <li><%= link_to guest.name, guest_path(guest) %></li>
+    <% end %>
+    </ul>
+    <br>
+    Average Rating: <%= @average_rating %>
+
+<% else %>
+
+    <p> No appearances logged for this episode yet: no guests to list, no rating average to display. </p>
+
 <% end %>
-</ul>
+
