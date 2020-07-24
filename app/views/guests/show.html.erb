@@ -2,7 +2,7 @@
 
 <% @guest.appearances.sort_by do |app| %>
 Air Date: <%= link_to app.episode.date, episode_path(app.episode) %> 
-   Rating: <%= app.rating %> <br>
+   Rating:<%= app.rating %> <br>
 <% end %>
 
 <br><br><br>

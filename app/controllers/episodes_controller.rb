@@ -7,6 +7,7 @@ class EpisodesController < ApplicationController
   end
 
   def show
+    byebug
   end
 
 
