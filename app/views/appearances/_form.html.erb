@@ -1,3 +1,11 @@
+<% if flash[:form_errors] %>
+    <% flash[:form_errors].each do |error_msg| %>
+        <%= error_msg %>
+    <% end %>
+<% end %>
+
+<br>
+
 <%= form_for @appearance do |f| %>
     <%= f.label  :episode %>
     <%= f.collection_select :episode_id, Episode.all, :id, :number %>
