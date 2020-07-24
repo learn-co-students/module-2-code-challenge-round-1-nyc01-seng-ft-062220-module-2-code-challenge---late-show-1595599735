@@ -1,9 +1,13 @@
 <h1> Specific Guest </h1>
 
+<%= @guest.name %> 
 <% @guest.episodes.each do |episode| %>
     <p>Episode date:<%= link_to episode.date, episode_path(episode) %></p><br>
+    
     <p>APPEARANCES:</p>
+    
     <% episode.appearances.each do |app| %>
         <p>Rating:<%= app.rating %></p>
     <% end %>
 <% end %>
+

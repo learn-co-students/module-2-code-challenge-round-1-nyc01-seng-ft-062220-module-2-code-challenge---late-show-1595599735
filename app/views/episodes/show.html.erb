@@ -5,3 +5,12 @@
 <% @episode.guests.each do |guest| %>
     <p><%= link_to guest.name, guest_path(guest) %></p>
 <% end %>
+
+<h2>Average Rating:</h2>
+
+<% total = 0 %>
+<% @episode.appearances.each do |appearance| %>
+    <% total += appearance.rating %>
+<% end %> 
+
+<%= total/@episode.appearances.length %>
