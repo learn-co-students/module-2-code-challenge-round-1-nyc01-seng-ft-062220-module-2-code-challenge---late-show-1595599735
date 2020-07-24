@@ -5,3 +5,11 @@
     <%= link_to guest.name, guest_path(guest) %>
 
 <%end %>
+
+  <% rating_array = [] %>
+<p><%  @episode.appearances.each do |item| %></p>
+    <% rating_array << item.rating %>
+<%end %>
+
+  <% total = rating_array.sum %>
+  Avg Rating: <%= total/rating_array.length %>
