@@ -16,6 +16,7 @@ class AppearancesController < ApplicationController
             redirect_to episode_path(@appearance.episode_id)
         else
             flash[:all_errors] = @appearance.errors.full_messages
+            flash[:alert] = "The guest has already appeared on that episode"
             redirect_to new_appearance_path
         end
     end

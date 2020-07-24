@@ -3,4 +3,6 @@
 <%= @episode.date %>
 <% @episode.guests.each do |guest| %> 
   Guest Star :  <%= link_to guest.name, guest_path(guest) %><br>
-  <% end %>
+  <% end %><br>
+
+  Episode Average Rating : <%= @episode.avg_rating %>

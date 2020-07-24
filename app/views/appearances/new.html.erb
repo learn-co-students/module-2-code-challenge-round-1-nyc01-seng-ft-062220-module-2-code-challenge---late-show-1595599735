@@ -1,6 +1,7 @@
 <h1> New Guest Appearance on an Episode</h1><br><br>
 
 <% if flash[:all_errors] %>
+    <%= flash[:alert] %>
 <% flash[:all_errors].each do |error| %>
     <%= error %><br>
 <% end %>

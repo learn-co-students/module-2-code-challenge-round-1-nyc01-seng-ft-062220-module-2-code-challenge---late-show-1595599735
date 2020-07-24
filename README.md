@@ -121,7 +121,7 @@ A Guest should only appear on a given Episode once.
 - Add a validation to Appearance to ensure that each Guest can only appear once on the same Episode.
 - Update the error handling on the Appearance creation form to show this validation error.
 
-### 7. Advanced: Episode Average Rating
+done - ### 7. Advanced: Episode Average Rating
 
 On the Episode show page, show the average rating of the Appearances for the episode.
 
