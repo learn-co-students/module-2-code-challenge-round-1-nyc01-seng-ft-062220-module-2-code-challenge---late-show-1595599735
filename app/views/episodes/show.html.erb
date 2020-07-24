@@ -1,8 +1,10 @@
 <h1>Episode Informtaion</h1>
-
+<%= button_to "Add Guest", new_appearance_path, :method => "get" %><br><br>
 <strong>Air Date: </strong><%= @episode.date %><br><br>
 <strong>Appeared <%= pluralize(@episode.guests.count, "guest") %></strong><br><br>
 <% @episode.guests.each do |g| %>
 <%= link_to g.name, guest_path(g) %><br>
 <% end %>
 <p>Average Rating: <%= @episode.avg_rating %></p>
+
+<%= button_to "Episode List", episodes_path, :method => "get" %>

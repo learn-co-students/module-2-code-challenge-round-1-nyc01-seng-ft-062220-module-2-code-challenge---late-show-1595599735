@@ -25,7 +25,7 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
-20.times do
+1000.times do
   Appearance.create(
     episode: Episode.all.sample,
     guest: Guest.all.sample,

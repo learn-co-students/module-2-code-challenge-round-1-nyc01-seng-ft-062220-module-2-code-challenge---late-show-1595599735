@@ -1,4 +1,6 @@
 <h1><%= @guest.name %>'s information</h1>
+<%= button_to "Add Episode", new_appearance_path, :method => "get" %>
+
 <h2>Appeared Episode</h2>
 <table>
     <% @guest.episodes.each do |e| %>
@@ -7,3 +9,4 @@
     <% end %>
 </table>
 
+<%= button_to "Guest List", guests_path, :method => "get" %>
