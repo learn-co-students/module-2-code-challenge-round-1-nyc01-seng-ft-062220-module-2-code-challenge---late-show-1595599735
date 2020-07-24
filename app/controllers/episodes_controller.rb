@@ -7,7 +7,7 @@ class EpisodesController < ApplicationController
   end
 
   def show
-    byebug
+    @avg_rating = @episode.appearances.map {|x| x.rating}.inject(0.0) { |sum, ele| sum + ele } / @episode.appearances.size
   end
 
 
