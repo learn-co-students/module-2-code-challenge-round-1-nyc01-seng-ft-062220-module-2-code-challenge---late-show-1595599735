@@ -1,0 +1,10 @@
+<h1> Guest Show page </h1>
+
+<p> Guest </p>
+<p><%= @guest.name %></p>
+
+<p> Episodes I appeared on: </p>
+<% @my_appearances.each do |appearance| %>
+<p><%= link_to "rating: #{appearance.rating} episode date: #{appearance.episode.date.strftime("%B %d, %Y")}", episode_path(appearance.episode) %><p>
+
+<% end %>
