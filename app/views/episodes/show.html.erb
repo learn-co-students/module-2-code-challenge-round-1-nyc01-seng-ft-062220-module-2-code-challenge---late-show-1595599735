@@ -1,0 +1,10 @@
+<h1>Information about Episode ID <%= @episode.id %></h1>
+
+
+Episode date & time: <%=@episode.date.strftime("%B %d, %Y")%><br>
+Guests on episode:
+<ul>
+    <% @episode.guests.each do |guest| %>
+        <li><%= link_to guest.name, guest_path(guest) %></li>
+    <% end%>
+</ul>
