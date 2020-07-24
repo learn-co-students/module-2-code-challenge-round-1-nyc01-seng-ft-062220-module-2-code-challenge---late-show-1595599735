@@ -1,0 +1,19 @@
+<% if flash[:form_errors] %>
+<h3>Errors:</h3>
+<ul>
+    <% flash[:form_errors].each do |error| %>
+        <li><%=error%></li>
+    <% end %>
+</ul>
+<% end %> 
+
+<%= form_for @episode do |t| %>
+
+    <%= t.label :date %>
+    <%= t.text_field :date %><br>
+
+    <%= t.label :number %>
+    <%= t.text_field :number %><br>
+
+    <%= t.submit %>
+<% end %>
