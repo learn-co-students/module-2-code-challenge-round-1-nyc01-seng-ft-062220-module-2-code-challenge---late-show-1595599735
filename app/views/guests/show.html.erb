@@ -7,11 +7,13 @@
 <h3>List of Episodes</h3>
 
 <ul>
-    <% @guest.appearances.each do |appearance|%>
+    <% @guest.sort_appearances.each do |appearance|%>
         <li>Date: <%= link_to appearance.episode.date, episode_path(appearance.episode) %></li>
         <li>Rating: <%= appearance.rating %></li>
         <br>
     <% end%>
 </ul>
+
+<h3>Guest's Average Appearance Rating: <%= @guest.avg_rating %></h3>
 
 <p><%= link_to "Back to Guest Index", guests_path %></p>
