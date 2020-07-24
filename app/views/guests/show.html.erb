@@ -1,6 +1,6 @@
 <h1>Guest Show Page</h1>
 <h2><%=@guest.name%></h2>
 <h3>Episodes</h3>
-<%@guest.episodes.each do |episode|%>
+<%@guest.episodes_sorted_by_average_rating.each do |episode|%>
     <p><%=link_to "#{episode.number} | #{episode.date}", episode_path(episode)%></p>
 <%end%>
